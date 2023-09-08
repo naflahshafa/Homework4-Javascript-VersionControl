@@ -6,24 +6,10 @@ for (let i = 0; i < 100; i++) {
     bilangan.push(bilanganAcak);
 }
 
-console.log("Array bilangan: " + bilangan);
-console.log("Panjang array bilangan: " + bilangan.length);
-console.log("----------")
-
-
 // Membuat 2 array masing-masing berisi index genap dan index ganjil dari array bilangan
 let indexGenap = []
 let indexGanjil = []
 
-// Membuat for loop jika ingin mengisi array berdasarkan value/nilai genap dan ganjil dari array bilangan
-// for(index = 0; index < bilangan.length; index++){
-//     if (bilangan[index] % 2 == 0) {
-//         indexGenap.push(bilangan[index])
-//     }
-//     else {
-//         indexGanjil.push(bilangan[index])
-//     }
-// }
 
 // Membuat for loop jika ingin mengisi array berdasarkan index genap dan ganjil dari array bilangan
 for (index = 0; index < bilangan.length; index++) {
@@ -35,12 +21,6 @@ for (index = 0; index < bilangan.length; index++) {
         indexGanjil.push(bilangan[index]);
     }
 }
-
-console.log("Array dengan index genap: " + indexGenap);
-console.log("Panjang array index genap: " + indexGenap.length);
-console.log("Array dengan index ganjil: " + indexGanjil);
-console.log("Panjang array index ganjil: " + indexGanjil.length);
-console.log("----------")
 
 
 // Membuat fungsi maksimum untuk mencari nilai terbesar dari array index genap dan index ganjil
@@ -56,9 +36,6 @@ function maximum (x){
 
 let nilaiMaxGenap = maximum(indexGenap)
 let nilaiMaxGanjil = maximum(indexGanjil)
-console.log("Nilai terbesar dalam array index genap: " + nilaiMaxGenap)
-console.log("Nilai terbesar dalam array index ganjil: " + nilaiMaxGanjil)
-console.log("----------")
 
 
 // Membuat fungsi minimum untuk mencari nilai terkecil dari array index genap dan index ganjil
@@ -74,9 +51,6 @@ function minimum (x){
 
 let nilaiMinGenap = minimum(indexGenap)
 let nilaiMinGanjil = minimum(indexGanjil)
-console.log("Nilai terkecil dalam array index genap: " + nilaiMinGenap)
-console.log("Nilai terkecil dalam array index ganjil: " + nilaiMinGanjil)
-console.log("----------")
 
 
 // Membuat fungsi total untuk mencari total nilai dari array index genap dan index ganjil
@@ -90,9 +64,6 @@ function total (x){
 
 let totalGenap = total(indexGenap)
 let totalGanjil = total(indexGanjil)
-console.log("Total nilai dalam array index genap: " + totalGenap)
-console.log("Total nilai dalam array index ganjil: " + totalGanjil)
-console.log("----------")
 
 
 // Membuat fungsi average untuk mencari nilai rata-rata dari array index genap dan index ganjil
@@ -103,9 +74,6 @@ function average (w, x){
 
 let rata2Genap = average(totalGenap, indexGenap)
 let rata2Ganjil = average(totalGanjil, indexGanjil)
-console.log("Rata-rata nilai dalam array index genap: " + rata2Genap)
-console.log("Rata-rata nilai dalam array index ganjil: " + rata2Ganjil)
-console.log("----------")
 
 
 // Membuat fungsi perbandingan untuk melihat perbandingan nilai setiap parameter dari array index genap dan index ganjil
@@ -113,27 +81,47 @@ function perbandingan (a, b){
     c = "index genap"
     d = "index ganjil"
     if (a == b){
-        console.log("Keduanya bernilai sama")
+        console.log("Keduanya bernilai sama \n")
     }
     else if (a > b){
-        console.log("Nilai " + c + "[" + a + "]" + " lebih besar dari " + d + "[" + b + "]")
+        console.log("Nilai " + c + "[" + a + "]" + " lebih besar dari " + d + "[" + b + "] \n")
     }
     else if (a < b){
-        console.log("Nilai " + d + "[" + b + "]" + " lebih besar dari " + c + "[" + a + "]")
+        console.log("Nilai " + d + "[" + b + "]" + " lebih besar dari " + c + "[" + a + "] \n")
     }
 }
 
+// Menampilkan Array Bilangan
+console.log("Array bilangan: " + bilangan);
+console.log("Panjang array bilangan: " + bilangan.length + "\n");
+
+// Menampilkan Array Index Genap
+console.log("Array dengan index genap: ", indexGenap);
+console.log("Panjang array index genap: ", indexGenap.length + "\n");
+
+// Menampilkan Array Index Ganjil
+console.log("Array dengan index ganjil: ", indexGanjil);
+console.log("Panjang array index ganjil: ", indexGanjil.length, "\n");
+
+// Perhitungan Array Index Genap dan Index Ganjil
+console.log("Nilai terbesar dalam array index genap: " + nilaiMaxGenap)
+console.log("Nilai terbesar dalam array index ganjil: " + nilaiMaxGanjil + "\n")
+console.log("Nilai terkecil dalam array index genap: ", nilaiMinGenap)
+console.log("Nilai terkecil dalam array index ganjil: ", nilaiMinGanjil, "\n")
+console.log("Total nilai dalam array index genap: " + totalGenap)
+console.log("Total nilai dalam array index ganjil: " + totalGanjil + "\n")
+console.log("Rata-rata nilai dalam array index genap: ", rata2Genap)
+console.log("Rata-rata nilai dalam array index ganjil: ", rata2Ganjil, "\n")
+
+// Perbandingan Array Index Genap dan Index Ganjil
 console.log("Perbandingan Nilai Max:")
 perbandingan(nilaiMaxGenap, nilaiMaxGanjil)
-console.log("----------")
 
 console.log("Perbandingan Nilai Min:")
 perbandingan(nilaiMinGenap, nilaiMinGanjil)
-console.log("----------")
 
 console.log("Perbandingan Nilai Total:")
 perbandingan(totalGenap, totalGanjil)
-console.log("----------")
 
 console.log("Perbandingan Nilai Rata-Rata:")
 perbandingan(rata2Genap, rata2Ganjil)
