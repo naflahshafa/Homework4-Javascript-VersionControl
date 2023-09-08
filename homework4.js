@@ -92,8 +92,8 @@ function perbandingan (a, b){
 }
 
 // Menampilkan Array Bilangan
-console.log("Array bilangan: " + bilangan);
-console.log("Panjang array bilangan: " + bilangan.length + "\n");
+console.log("Array bilangan: ", bilangan);
+console.log("Panjang array bilangan: ", bilangan.length + "\n");
 
 // Menampilkan Array Index Genap
 console.log("Array dengan index genap: ", indexGenap);
